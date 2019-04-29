@@ -1,21 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './static/index.css';
-import './MessageListArea.js'
+import MessageListArea from './MessageListArea.js';
+import MessageInputArea from './MessageInputArea.js';
+import ChannelListArea from './ChannelListArea.js';
+import UserInfoArea from './UserInfoArea.js'
+
+
+import 'bootstrap/dist/css/bootstrap.css';
+import {Row, Col} from 'react-bootstrap';
 
 class Main extends React.Component{
   render(){
     return(
+
       <div>
-        <MessageListArea />
-        <div className="shopping-list">
-          <h1>Shopping List for asdfasdf</h1>
-          <ul>
-            <li>Instagram</li>
-            <li>WhatsApp</li>
-            <li>Oculus</li>
-          </ul>
-        </div>
+        <Row>
+          <Col md={2}>
+            <UserInfoArea />
+            <ChannelListArea />
+          </Col>
+          <Col>
+            <MessageListArea />
+            <MessageInputArea />
+          </Col>
+        </Row>
       </div>
     );
   }

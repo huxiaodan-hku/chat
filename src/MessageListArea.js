@@ -1,4 +1,5 @@
 import React from 'react';
+import "./static/MessageListArea.css"
 
 class MessageListArea extends React.Component{
   render(){
@@ -7,3 +8,5 @@ class MessageListArea extends React.Component{
     );
   }
 }
+
+export default MessageListArea;
